@@ -126,7 +126,7 @@ section div.img{
 
 
 section#Notion div.img{
-    background-image: url(imagens/imagem_central.png);
+    background-image: url("imagens/imagem_central.png");
 }
 
 
@@ -136,13 +136,13 @@ section#Android{
 
 
 section#Android div.img{
-    background-image: url(imagens/imagem_android.png);
+    background-image: url("imagens/imagem_android.png");
 }
 
 
 section#Cordel > div.img{
     background-position: right top;
-    background-image: url(imagens/imagem_cordel.jpg);
+    background-image: url("imagens/imagem_cordel.jpg");
     margin-bottom: 100px;
 }
 
