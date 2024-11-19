@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Feedback</title>
+    <link rel="stylesheet" href="/css/fonts.css">
+    <link rel="stylesheet" href="/css/estilo_principal.css">
+    <link rel="stylesheet" href="css/estilo_formulario.css">
+    <link rel="stylesheet" href="css/header_footer_padrao.css">
+    <link rel="stylesheet" href="/css/resposivo.css">
+</head>
+<body>
+    <header>
+        <a href="/pagina_principal.html" target="_self" id="logo">
+            <div id="Brain">
+                <img src="imagens/brain.png" alt="Cerebro">
+            </div>
+            <div id="Titulo">
+                <h1>Buscando</h1>
+                <h1>Conhecimento</h1>
+            </div>
+        </a>
+        <ul>
+            <a href="https://central-silvio006.notion.site/205587c41f92414ead9b4ce1795958c3?v=08b1f4815f804105956d30ffdd7fa3c2" target="_blank"><li>Meu Notion</li></a>
+            <a href="android.html" target="_blank"><li>Projeto Android</li></a>
+            <a href="cordel.html" target="_blank"><li>Projeto Cordel</li></a>
+            <a href="/multimidia.html" target="_self"><li id="galeria">Galeria</li></a>
+            <a href="/formulario.html" target="_self"><li id="formu">Deixe seu comentário!</li></a>
+        </ul>
+    </header>
+    
+    <main>
+        <section id="formulario">
+            <h2>Questionário de Feedback</h2>
+            <form action="" method="post">
+                <label for="nome">Nome:</label>
+                <input type="text" id="nome" name="nome" placeholder="Digite seu nome completo" required>
+
+                <label for="cpf">CPF:</label>
+                <input type="text" id="cpf" name="cpf" placeholder="Digite seu CPF" required>
+
+                <label for="telefone">Telefone:</label>
+                <input type="text" id="telefone" name="telefone" placeholder="Digite seu telefone" required>
+
+                <label for="endereco">Endereço:</label>
+                <input type="text" id="endereco" name="endereco" placeholder="Digite seu endereço" required>
+
+                <div class="campo">
+                    <label for="conteudo">Você gostou do conteúdo?</label>
+                    <select id="conteudo" name="conteudo">
+                        <option value="sim">Sim</option>
+                        <option value="nao">Não</option>
+                    </select>
+                </div>
+
+                <label for="avaliacao">Avaliação do conteúdo do site (1 a 5):</label>
+                <select id="avaliacao" name="avaliacao">
+                    <option value="1">1 - Péssimo</option>
+                    <option value="2">2 - Ruim</option>
+                    <option value="3">3 - Regular</option>
+                    <option value="4">4 - Bom</option>
+                    <option value="5">5 - Excelente</option>
+                </select>
+
+                <label for="descricao">O que você acha que eu poderia melhorar?</label>
+                <textarea id="descricao" name="descricao" placeholder="Digite sua sugestão ou comentário aqui..." rows="4" required></textarea>
+
+                <button type="submit">Enviar</button>
+                <button type="reset">Limpar</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Este site foi desenvolvido por <a href="https://www.linkedin.com/in/silvio-castro006/" target="_blank"> &#x1F517Silvio Ricardo Machado de Castro</a></p>
+    </footer>
+</body>
+</html>
