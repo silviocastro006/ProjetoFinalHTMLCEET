@@ -43,11 +43,11 @@ span{
 }
 
 #apresentacao aside p:nth-of-type(1){
-    margin-top: 40px;
+    margin-top: 20px;
 }
 
 #apresentacao aside p:nth-of-type(2){
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 
@@ -59,6 +59,7 @@ section#apresentacao p{
 }
 
 section#apresentacao{
+    margin-top: 60px;
     align-items: center;
     vertical-align: middle;
     justify-content:center;
@@ -70,18 +71,50 @@ section#apresentacao{
     margin-bottom: 200px;
 }
 
-#imagem_apresentacao img{
-    border-radius: 50%;
+#imagem_apresentacao {
+    position: relative;
     width: 400px;
     height: 400px;
-    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden; /* Garante que as imagens não ultrapassem o contêiner */
 }
 
+#imagem_apresentacao img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta a imagem ao tamanho do contêiner */
+    border-radius: 50%; /* Deixa a imagem circular */
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: opacity 0.3s ease-in-out; /* Transição suave */
+}
+
+#imagem_apresentacao .img1 {
+    opacity: 1; /* Imagem inicial visível */
+    z-index: 1;
+}
+
+#imagem_apresentacao .img2 {
+    opacity: 0; /* Segunda imagem inicialmente escondida */
+    z-index: 2;
+}
+
+#imagem_apresentacao:hover .img1 {
+    opacity: 0; /* Esconde a primeira imagem no hover */
+}
+
+#imagem_apresentacao:hover .img2 {
+    opacity: 1; /* Mostra a segunda imagem no hover */
+}
+
+
 .tit{
+    margin-top: 50px;
     font-size: 60px;
     color: white;
     font-weight: bold;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
     
 }
 
@@ -121,12 +154,13 @@ section div.img{
     background-repeat: no-repeat;
     height: 600px;
     margin-bottom: 100px;
-    background-position: right bottom;
+    background-position: center bottom;
 }
 
 
 section#Notion div.img{
     background-image: url("../imagens/imagem_central.png");
+    background-position: left top;
 }
 
 
@@ -169,5 +203,9 @@ section#Final h2{
     text-align: center;
     justify-content: center;
     vertical-align: center;
-    margin-bottom: 300px;
+    margin-bottom: 100px;
+}
+
+section#Final > h2 > span{
+    line-height:180px;
 }
